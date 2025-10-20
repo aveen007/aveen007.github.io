@@ -140,7 +140,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # # Collections
 # # -----------------------------------------------------------------------------
 
-# collections:
+collections:
 #   books:
 #     output: true
 #   news:
