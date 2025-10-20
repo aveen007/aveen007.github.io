@@ -1,7 +1,7 @@
 ---
 layout: post
-title: A long announcement with details
-date: 2025-27-06 16:11:00-0400
+title: FLAMN 2025
+date: 2025-06-27 16:11:00-0400
 inline: false
 related_posts: false
 ---
