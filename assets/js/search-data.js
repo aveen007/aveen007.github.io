@@ -47,12 +47,10 @@ ninja.data = [{
         },{id: "news-our-paper-augmentation-of-laser-welding-dataset-through-a-combination-of-evolutionary-optimization-and-deep-learning-was-accepted-at-gecco-2025",
           title: 'Our paper “Augmentation of Laser Welding Dataset through a combination of Evolutionary Optimization...',
           description: "",
-          section: "News",},{id: "news-flamn-2025",
-          title: 'FLAMN 2025',
+          section: "News",},{id: "news-happy-to-have-participated-at-flamn-2025-presenting-intelligent-weld-inspection-machine-learning-driven-defect-detection-for-automated-laser-welding-quality-control",
+          title: 'Happy to have participated at FLAMN 2025, presenting “INTELLIGENT WELD INSPECTION: MACHINE LEARNING-DRIVEN...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2.html";
-            },},{id: "projects-autonomous-vehicle-simulation",
+          section: "News",},{id: "projects-autonomous-vehicle-simulation",
           title: 'Autonomous Vehicle Simulation',
           description: "Self-driving car simulator using Unity and deep reinforcement learning with custom physics, traffic systems, and real-time computer vision integration.",
           section: "Projects",handler: () => {
@@ -62,6 +60,16 @@ ninja.data = [{
           description: "Automated quality control system using semantic segmentation and generative data augmentation for laser weld inspection.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project.html";
+            },},{id: "projects-takeaim-multiplayer-fps",
+          title: 'TakeAim - Multiplayer FPS',
+          description: "Realistic multiplayer first-person shooter with network synchronization, diverse terrains, and immersive combat mechanics developed in Unity.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_project.html";
+            },},{id: "projects-monkeys-programming-language-compiler",
+          title: 'MonKeys Programming Language Compiler',
+          description: "Custom compiler for a dynamically typed language with inheritance, polymorphism, and template support, featuring a stack-based virtual machine with shared memory architecture.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project.html";
             },},{
         id: 'social-github',
         title: 'GitHub',
