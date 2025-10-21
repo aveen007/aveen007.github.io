@@ -1,81 +1,117 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
-importance: 2
+title: Laser Weld Defect Detection
+description: Automated quality control system using semantic segmentation and generative data augmentation for laser weld inspection.
+img: /assets/img/laser-weld-detection.jpg
+importance: 1
 category: work
-giscus_comments: true
+related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+This project addresses the critical need for automated quality control in laser welding processes through computer vision and machine learning. Traditional manual inspection of weld macrosections is slow, subjective, and error-prone, making automation essential for modern manufacturing.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="/assets/img/weld-pipeline.jpg" title="Automated Weld Inspection Pipeline" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    End-to-end pipeline for automated laser weld defect detection and quality assessment.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## Project Overview
+
+Laser-weld macrosection analysis is essential for assessing weld quality and detecting defects according to ISO 6520-1 standards. This research proposes an automated pipeline that integrates generative data augmentation with weld segmentation to overcome the limitations of manual inspection and data scarcity in industrial settings.
+
+## Technical Approach
+
+### Generative Data Augmentation
+To address the scarcity of annotated industrial weld data, we employed Stable Diffusion to synthesize high-quality weld macrosection images. This approach generated up to 4,500 synthetic weld images, significantly expanding our training dataset while preserving crucial contour features that standard augmentations like flipping or cropping would distort.
+
+### Semantic Segmentation Architecture
+We evaluated multiple state-of-the-art segmentation models for defect identification:
+
+- **DDRNet**: Deep Dual-Resolution Network maintaining parallel high- and low-resolution feature streams
+- **BiSeNet**: Bilateral Segmentation Network combining spatial and contextual paths
+- **YOLOv11**: Adapted for segmentation with stable inference and strong robustness
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="/assets/img/model-architecture.jpg" title="Model Architecture Pipeline" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="/assets/img/defect-examples.jpg" title="Weld Defect Examples" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Complete model architecture (left) and examples of detected weld defects including undercut, shrinkage groove, and incomplete penetration (right).
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## Experimental Results
 
-{% raw %}
+Our evaluation employed both standard segmentation metrics and domain-specific geometrical measurements compared against expert manual assessments:
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/segmentation-results.jpg" title="Segmentation Performance Comparison" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
-```
+<div class="caption">
+    Comparative performance of segmentation architectures on weld defect detection.
+</div>
 
-{% endraw %}
+**Key Findings:**
+- YOLOv11 achieved **97.5% agreement** with expert measurements across 1,312 defects
+- All models demonstrated high mIoU scores (>95%)
+- The pipeline successfully identified critical defects including continuous undercut, shrinkage groove, excess weld metal, and linear misalignment
+- Generated synthetic data maintained geometrical accuracy with <10% deviation from expert measurements
+
+## Implementation Details
+
+### Data Collection
+- Material: 09G2S pipeline structural steel (3 × 150 × 450 mm)
+- Camera positioned at multiple locations along weld (72mm, 152mm, 232mm, 312mm)
+- 166 original weld macrosection images collected from manufacturing line
+
+### Measurement Parameters
+- Weld width (b), depth (s), and heat-affected zone area (Aw)
+- Defect quantification according to ISO 6520-1 standards
+- Real-time monitoring and control capabilities
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/quality-metrics.jpg" title="Quality Assessment Metrics" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/real-time-monitoring.jpg" title="Real-time Monitoring Interface" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Automated geometrical measurements (left) and real-time quality monitoring system (right).
+</div>
+
+## Research Impact
+
+This work represents the first approach combining generative augmentation and segmentation for reliable, high-precision weld macrosection inspection. The pipeline enables:
+
+- **Automated Quality Control**: Reduces manual inspection time and subjectivity
+- **High-Precision Measurements**: Achieves expert-level accuracy in defect quantification
+- **Scalable Deployment**: Suitable for integration into manufacturing production lines
+- **Standard Compliance**: Adheres to ISO 6520-1 welding defect standards
+
+## Publications
+
+This research has been presented at international conferences:
+- **GECCO 2025**: Genetic and Evolutionary Computation Conference (ACM/SIGEVO)
+- **FLAMN 2025**: Conference on Artificial Intelligence Applications
+- **AAAI Conference**: Under review for 2025 proceedings
+
+**Code Repository**: [LaserWeldMonitor on GitHub](https://github.com/ILT-ITMO/LaserWeldMonitor.git)
+
+## Technologies Used
+
+- **Computer Vision**: YOLOv11, DDRNet, BiSeNet
+- **Generative AI**: Stable Diffusion for data augmentation
+- **Deep Learning**: PyTorch, semantic segmentation
+- **Industrial Standards**: ISO 6520-1 compliance
+- **Programming**: Python, OpenCV, image processing libraries

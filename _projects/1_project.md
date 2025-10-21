@@ -1,81 +1,101 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Autonomous Vehicle Simulation
+description: Self-driving car simulator using Unity and deep reinforcement learning with custom physics, traffic systems, and real-time computer vision integration.
+img: /assets/img/autonomous-vehicle.jpg
 importance: 1
 category: work
-related_publications: true
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+This project implements a comprehensive self-driving car simulator using Unity ML-Agents with custom deep reinforcement learning algorithms. The system features realistic vehicle physics, dynamic traffic simulation, and integrates state-of-the-art computer vision models for lane and object detection in real-time.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="https://github.com/aveen007/autonomous-vehicle-with-unity/assets/73739296/fa9a7b1c-31a9-4608-a213-1e3d17ae0aba" title="Autonomous Vehicle Simulation Environment" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Custom city environment with realistic vehicle physics simulating six distinct forces and dynamic traffic system.
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## Simulation Architecture
+
+The simulator creates two training environments with custom car physics based on six simulated forces:
+- **Suspension, Acceleration, Steering** - Core vehicle dynamics
+- **Brakes, Slipping, Friction** - Realistic movement constraints
+
+Animation curves were implemented for hyperrealistic vehicle feel and precise control. The traffic system utilizes a custom waypoint tool for flexible route planning with branching at intersections to increase environmental randomness.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="https://img.youtube.com/vi/dLL61kv3VtI/0.jpg" title="YOLOv8 Object Detection in Unity" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="https://img.youtube.com/vi/jcJKDtwVbVY/0.jpg" title="CLRNet Lane Detection Visualization" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="https://img.youtube.com/vi/nSKgw1XCndI/0.jpg" title="DQN Training with LIDAR + CLRNet" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Real-time computer vision integration: YOLOv8 object detection (left), CLRNet lane detection (middle), and DQN training visualization (right).
+</div>
+
+## Technical Implementation
+
+### Machine Learning Pipeline
+- **Unity ML-Agents Release 20** with Python Low Level API
+- **Custom DQN Algorithm** for vehicle control (throttle/steering)
+- **Sensor Integration**: LIDAR and Camera data fusion
+- **Computer Vision**: CLRNet for lane detection and YOLOv8 for object detection
+- **Learning from Demonstrations** through experience replay memory
+
+### System Features
+- Dynamic traffic spawning using object pooling and navigation mesh
+- Custom side channels for real-time UI visualization
+- Checkpoint system for training progression
+- Multi-platform standalone builds
+- Real-time performance monitoring in TensorBoard
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="https://github.com/aveen007/autonomous-vehicle-with-unity/assets/73739296/2da26b10-0a68-4f64-8cb4-1d5c9e8ab22c" title="Neural Network Architecture" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="/assets/img/autonomous-vehicle-ui.jpg" title="Real-time Visualization UI" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Neural network architecture for DQN implementation (left) and real-time visualization interface showing vehicle controls and sensor data (right).
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## Project Outcomes
 
-{% raw %}
+- Achieved **94% evaluation score** and ranked as top graphics project for bachelor's thesis
+- Successfully coordinated **6 researchers** across computer vision, graphics, AI, and systems engineering
+- Implemented **comparative analysis** between LIDAR-only and LIDAR+CLRNet enhanced models
+- Developed **custom reward function** that significantly improved training efficiency
+- Average vehicle speed of **30 km/h** using DQN control methods
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
+**Project Documentation**: [View Full Project PDF](https://github.com/aveen007/autonomous-vehicle-with-unity/blob/main/Aveen%20Hussein2.pdf)
+
+**Source Code**: Available upon request at [aveen2000hussein@gmail.com](mailto:aveen2000hussein@gmail.com)
+
+## Technologies Used
+
+- **Unity 3D** with ML-Agents
+- **Python** with PyTorch
+- **C#** for Unity scripting
+- **YOLOv8** and **CLRNet** for computer vision
+- **Deep Q-Network (DQN)** reinforcement learning
+- **Custom Physics Engine** with six-force simulation
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/traffic-system.jpg" title="Dynamic Traffic System" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
-```
-
-{% endraw %}
+<div class="caption">
+    Dynamic traffic system supporting 30 vehicles and 30 pedestrians with waypoint navigation and object pooling.
+</div>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FLAMN 2025
-date: 2025-06-27 16:11:00-0400
+date: 2025-04-18 15:59:00-0400
 inline: false
 related_posts: false
 ---
