@@ -62,9 +62,7 @@ Animation curves were implemented for hyperrealistic vehicle feel and precise co
     <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.liquid path="https://github.com/aveen007/autonomous-vehicle-with-unity/assets/73739296/2da26b10-0a68-4f64-8cb4-1d5c9e8ab22c" title="Neural Network Architecture" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="/assets/img/autonomous-vehicle-ui.jpg" title="Real-time Visualization UI" class="img-fluid rounded z-depth-1" %}
-    </div>
+   
 </div>
 <div class="caption">
     Neural network architecture for DQN implementation (left) and real-time visualization interface showing vehicle controls and sensor data (right).
@@ -91,11 +89,3 @@ Animation curves were implemented for hyperrealistic vehicle feel and precise co
 - **Deep Q-Network (DQN)** reinforcement learning
 - **Custom Physics Engine** with six-force simulation
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="/assets/img/traffic-system.jpg" title="Dynamic Traffic System" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Dynamic traffic system supporting 30 vehicles and 30 pedestrians with waypoint navigation and object pooling.
-</div>

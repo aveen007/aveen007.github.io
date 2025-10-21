@@ -10,14 +10,7 @@ related_publications: true
 
 This project addresses the critical need for automated quality control in laser welding processes through computer vision and machine learning. Traditional manual inspection of weld macrosections is slow, subjective, and error-prone, making automation essential for modern manufacturing.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="/assets/img/weld-pipeline.jpg" title="Automated Weld Inspection Pipeline" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    End-to-end pipeline for automated laser weld defect detection and quality assessment.
-</div>
+
 
 ## Project Overview
 
@@ -37,10 +30,10 @@ We evaluated multiple state-of-the-art segmentation models for defect identifica
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="/assets/img/model-architecture.jpg" title="Model Architecture Pipeline" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="/assets/img/WeldArch.jpg" title="Model Architecture Pipeline" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="/assets/img/defect-examples.jpg" title="Weld Defect Examples" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="/assets/img/WeldDefectAsDefinedByISO.png" title="Weld Defect Examples" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -51,13 +44,38 @@ We evaluated multiple state-of-the-art segmentation models for defect identifica
 
 Our evaluation employed both standard segmentation metrics and domain-specific geometrical measurements compared against expert manual assessments:
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="/assets/img/segmentation-results.jpg" title="Segmentation Performance Comparison" class="img-fluid rounded z-depth-1" %}
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Model</th>
+                    <th scope="col">mIoU</th>
+                    <th scope="col">Agreement Accuracy</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>DDRNet</td>
+                    <td>95.46%</td>
+                    <td>88.62%</td>
+                </tr>
+                <tr>
+                    <td>BiSeNet</td>
+                    <td>95.21%</td>
+                    <td>94.78%</td>
+                </tr>
+                <tr>
+                    <td>YOLOv11</td>
+                    <td>95.24%</td>
+                    <td>97.50%</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 <div class="caption">
-    Comparative performance of segmentation architectures on weld defect detection.
+    Table 1: Comparative performance of segmentation architectures on weld defect detection.
 </div>
 
 **Key Findings:**
@@ -83,7 +101,7 @@ Our evaluation employed both standard segmentation metrics and domain-specific g
         {% include figure.liquid loading="eager" path="/assets/img/quality-metrics.jpg" title="Quality Assessment Metrics" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="/assets/img/real-time-monitoring.jpg" title="Real-time Monitoring Interface" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="/assets/img/weldUI.PNG" title="Real-time Monitoring Interface" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
