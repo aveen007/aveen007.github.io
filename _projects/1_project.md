@@ -73,4 +73,3 @@ Animation curves were implemented for hyperrealistic vehicle feel and precise co
 - **YOLOv8** and **CLRNet** for computer vision
 - **Deep Q-Network (DQN)** reinforcement learning
 - **Custom Physics Engine** with six-force simulation
-

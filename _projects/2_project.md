@@ -131,3 +131,19 @@ This research has been presented at international conferences:
 - **Deep Learning**: PyTorch, semantic segmentation
 - **Industrial Standards**: ISO 6520-1 compliance
 - **Programming**: Python, OpenCV, image processing libraries
+
+## References
+
+Mao, G.; Cao, T.; Li, Z.; and Dong, Y. 2025. Enhancing Shape Perception and Segmentation Consistency for Industrial Image Inspection. arXiv:2505.14718.
+
+Pan, H.; Hong, Y.; Sun, W.; and Jia, Y. 2022. Deep Dual-Resolution Networks for Real-Time and Accurate Semantic Segmentation of Traffic Scenes. IEEE Transactions on Intelligent Transportation Systems.
+
+Reiss, T.; Cohen, N.; Bergman, L.; and Hoshen, Y. 2021. PANDA: Adapting Pretrained Features for Anomaly Detection and Segmentation. In 2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2805–2813.
+
+Rombach, R.; Blattmann, A.; Lorenz, D.; Esser, P.; and Ommer, B. 2022. High-Resolution Image Synthesis with Latent Diffusion Models. arXiv:2112.10752.
+
+Shorten, C.; and Khoshgoftaar, T. M. 2019. A survey on Image Data Augmentation for Deep Learning. Journal of Big Data, 6(1): 60.
+
+Tran, T. A.; Lobov, A.; Kaasa, T. H.; Bjelland, M.; and Midling, O. T. 2021. CAD integrated automatic recognition of weld paths. The International Journal of Advanced Manufacturing Technology, 115(7): 2145–2159.
+
+Yu, C.; Wang, J.; Peng, C.; Gao, C.; Yu, G.; and Sang, N. 2018. BiSeNet: Bilateral Segmentation Network for Real-time Semantic Segmentation. arXiv:1808.00897.

@@ -101,15 +101,6 @@ TakeAim is a realistic multiplayer first-person shooter game where soldiers batt
 - **Cross-platform Compatibility**: Windows standalone build with DirectX support
 - **Performance Tuning**: Optimized for 60 FPS gameplay on mid-range systems
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="https://img.youtube.com/vi/BP_n_MwNSS4/0.jpg" title="TakeAim Gameplay Demo" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    TakeAim gameplay demonstration showcasing multiplayer combat, terrain variety, and network synchronization.
-</div>
-
 ## Project Outcomes
 
 - Successfully implemented **full multiplayer FPS architecture** from scratch
@@ -137,5 +128,5 @@ TakeAim is a realistic multiplayer first-person shooter game where soldiers batt
     </div>
 </div>
 <div class="caption">
-    Strategic combat scenarios demonstrating terrain utilization and tactical positioning in multiplayer matches.
+    Weapon system.
 </div>
