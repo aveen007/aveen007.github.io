@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://en.itmo.ru/'>Master's student @ITMO University</a>
+subtitle: Master's student <a href='https://en.itmo.ru/'>@ITMO University</a>
 
 profile:
   align: right
@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Master's candidate in System and Applied Software Engineering at [ITMO University](https://en.itmo.ru/en/), specializing in computer vision, machine learning, and intelligent systems. My research focuses on developing automated quality control systems for industrial applications.
+I am a Master's candidate in System and Applied Software Engineering at [ITMO University](https://en.itmo.ru/en/).
 
 Currently, I work as a Research Assistant at the [Institute of Laser Technology (ILT ITMO)](https://ilt.itmo.ru/team/), where I develop real-time monitoring and control systems for laser welding quality inspection. My work involves building data augmentation frameworks using Stable Diffusion, implementing segmentation models, and creating multi-modal analysis pipelines with OpenCV and OCR technologies.
 

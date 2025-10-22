@@ -120,7 +120,7 @@ TakeAim is a realistic multiplayer first-person shooter game where soldiers batt
 
 **Demo Video**: [Watch on YouTube](https://youtu.be/BP_n_MwNSS4?si=v7KFNjaxrNEirJqv)
 
-**Download**: [Game Executable](Releases/TakeAim1.6.rar)
+**Download**: [Game Executable](https://github.com/aveen007/takeaim/blob/main/Releases/TakeAim1.6.rar)
 
 ## Technologies Used
 

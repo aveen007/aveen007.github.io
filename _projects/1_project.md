@@ -27,21 +27,6 @@ The simulator creates two training environments with custom car physics based on
 
 Animation curves were implemented for hyperrealistic vehicle feel and precise control. The traffic system utilizes a custom waypoint tool for flexible route planning with branching at intersections to increase environmental randomness.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="https://img.youtube.com/vi/dLL61kv3VtI/0.jpg" title="YOLOv8 Object Detection in Unity" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="https://img.youtube.com/vi/jcJKDtwVbVY/0.jpg" title="CLRNet Lane Detection Visualization" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="https://img.youtube.com/vi/nSKgw1XCndI/0.jpg" title="DQN Training with LIDAR + CLRNet" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Real-time computer vision integration: YOLOv8 object detection (left), CLRNet lane detection (middle), and DQN training visualization (right).
-</div>
-
 ## Technical Implementation
 
 ### Machine Learning Pipeline

@@ -10,8 +10,6 @@ related_publications: true
 
 This project addresses the critical need for automated quality control in laser welding processes through computer vision and machine learning. Traditional manual inspection of weld macrosections is slow, subjective, and error-prone, making automation essential for modern manufacturing.
 
-
-
 ## Project Overview
 
 Laser-weld macrosection analysis is essential for assessing weld quality and detecting defects according to ISO 6520-1 standards. This research proposes an automated pipeline that integrates generative data augmentation with weld segmentation to overcome the limitations of manual inspection and data scarcity in industrial settings.
@@ -28,16 +26,20 @@ We evaluated multiple state-of-the-art segmentation models for defect identifica
 - **BiSeNet**: Bilateral Segmentation Network combining spatial and contextual paths
 - **YOLOv11**: Adapted for segmentation with stable inference and strong robustness
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
+<div class="row justify-content-center">
+    <div class="col-sm-10 mt-3 mt-md-0">
         {% include figure.liquid path="/assets/img/WeldArch.jpg" title="Model Architecture Pipeline" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-sm-10 mt-3 mt-md-0">
         {% include figure.liquid path="/assets/img/WeldDefectAsDefinedByISO.png" title="Weld Defect Examples" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
-    Complete model architecture (left) and examples of detected weld defects including undercut, shrinkage groove, and incomplete penetration (right).
+    Complete model architecture (top) and examples of detected weld defects including undercut, shrinkage groove, and incomplete penetration (bottom).
 </div>
 
 ## Experimental Results
@@ -96,16 +98,13 @@ Our evaluation employed both standard segmentation metrics and domain-specific g
 - Defect quantification according to ISO 6520-1 standards
 - Real-time monitoring and control capabilities
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="/assets/img/quality-metrics.jpg" title="Quality Assessment Metrics" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-center">
+    <div class="col-sm-12 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="/assets/img/weldUI.PNG" title="Real-time Monitoring Interface" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Automated geometrical measurements (left) and real-time quality monitoring system (right).
+    Automated geometrical measurements UI (available for public use at <a href="https://aveen007.github.io/weldfront/">Weld UI</a>).
 </div>
 
 ## Research Impact
@@ -121,8 +120,7 @@ This work represents the first approach combining generative augmentation and se
 
 This research has been presented at international conferences:
 - **GECCO 2025**: Genetic and Evolutionary Computation Conference (ACM/SIGEVO)
-- **FLAMN 2025**: Conference on Artificial Intelligence Applications
-- **AAAI Conference**: Under review for 2025 proceedings
+- **FLAMN 2025**: Conference on Laser-Weld Applications
 
 **Code Repository**: [LaserWeldMonitor on GitHub](https://github.com/ILT-ITMO/LaserWeldMonitor.git)
 
